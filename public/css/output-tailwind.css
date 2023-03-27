@@ -513,6 +513,163 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 361px) {
+  .container {
+    max-width: 361px;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-\[20px\] {
+  height: 20px;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
+.h-\[45px\] {
+  height: 45px;
+}
+
+.h-\[46px\] {
+  height: 46px;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[60px\] {
+  height: 60px;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[110px\] {
+  width: 110px;
+}
+
+.w-\[40px\] {
+  width: 40px;
+}
+
+.w-\[46px\] {
+  width: 46px;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.bg-blueDenim {
+  background-color: RGB(19, 122, 172);
+}
+
+.bg-brightTurquoise {
+  background-color: RGB(21, 204, 237);
+}
+
+.bg-cyanPictonBlue {
+  background-color: RGB(58, 215, 232);
+}
+
+.bg-darkBlueBigStone {
+  background-color: RGB(23, 37, 64);
+}
+
+.bg-darkPurpleValhalla {
+  background-color: RGB(36, 21, 69);
+}
+
+.bg-fuschiaCabaret {
+  background-color: RGB(212, 81, 112);
+}
+
+.bg-palePinkCancan {
+  background-color: RGB(212, 135, 164);
+}
+
+.text-center {
+  text-align: center;
+}
+
 .font-Potra {
   font-family: Potra, Roboto, sans-serif;
 }
@@ -525,15 +682,27 @@ video {
   font-size: 10rem;
 }
 
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-semibold {
   font-weight: 600;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-darkPurpleValhalla {
+  color: RGB(36, 21, 69);
+}
+
 .text-fuschiaCabaret {
   color: RGB(212, 81, 112);
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
 }

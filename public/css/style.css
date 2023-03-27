@@ -5,13 +5,13 @@
 
 
 
-body{
-    background-color: rgb(20, 39, 63);
-    color: black;
+body {
+    /* background-color: rgb(20, 39, 63); */
+    /* color: black; */
     /* font-family: "Potra", sans-serif; */
 }
 
-
+/* Breathing effect */
 /* https://www.kirupa.com/html5/creating_colorful_smart_shadows.htm */
 .labyrinth-img {
     margin: 100px;
@@ -20,7 +20,7 @@ body{
     background-image: url("../images/labyrinth.png");
     background-repeat: no-repeat;
     background-size: contain;
-  }
+}
 
 .colorfulShadow {
     position: relative;
@@ -50,7 +50,174 @@ body{
     }
 }
 
+/* Glowing light effect between header and main */
+/* https://codepen.io/jouni/pen/rVYYQX */
+@keyframes progress1 {
+    0% {
+        transform: scaleX(0);
+        opacity: .5;
+    }
 
-h2{
-    font-size: 14rem;
+    85% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    92% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(1);
+        opacity: 0;
+    }
 }
+
+/* @keyframes progress2 {
+    0% {
+      transform: scale(.3,.8) translateZ(0);
+      opacity: 0;
+    }
+    90% {
+      transform: scale(1,1) translateX(300px) translateZ(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1,1) translateX(300px) translateZ(0);
+      opacity: 0;
+    }
+  } */
+
+@keyframes progress2 {
+    0% {
+        transform: scale(.3, .8) translateZ(0);
+        opacity: 0;
+    }
+
+    65% {
+        transform: scale(1, 1) translateX(100vw) translateZ(0);
+        opacity: 1;
+    }
+
+    70% {
+        transform: scale(1, 1) translateX(100vw) translateZ(0);
+        opacity: 1;
+    }
+
+    90% {
+        transform: scale(1, 1) translateX(100vw) translateZ(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1, 1) translateX(100vw) translateZ(0);
+        opacity: 0;
+    }
+}
+
+.line-between-header-main {
+    /* position: absolute;
+    top: 50%;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px; */
+    height: 3px;
+    background: rgba(255, 255, 255, .1);
+}
+
+.line-between-header-main:before {
+    animation: progress1 4s infinite;
+    animation-delay: 1s;
+    transform-origin: 0 0;
+    content: "";
+    display: block;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 1));
+}
+
+.line-between-header-main:after {
+    content: "";
+    position: absolute;
+    animation: progress2 4s infinite;
+    /* animation-timing-function: ease-out; */
+    animation-delay: 1s;
+    transform-origin: 90% 50%;
+    /* transform-origin: 0 0; */
+    margin-left: -30px;
+    top: 55px;
+    width: 30px;
+    height: 21px;
+    border-radius: 2px;
+    background: rgba(210, 189, 255, .55);
+    filter: blur(8px);
+    box-shadow: 0 0 10px 6px rgba(210, 189, 255, .4),
+        -20px 0 15px 4px rgba(210, 189, 255, .3),
+        -40px 0 15px 2px rgba(210, 189, 255, .2),
+        -60px 0 10px 1px rgba(210, 189, 255, .1),
+        -80px 0 10px 1px rgba(210, 189, 255, .05);
+}
+
+
+/* Log in button */
+/* https://codepen.io/JoshuaDavids/pen/gOpzVWR */
+.log-in-button {
+    position: absolute;
+    line-height: 60px;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgb(21, 204, 237), rgb(212, 81, 112), rgb(21, 204, 237));
+    background-size: 400%;
+    border-radius: 30px;
+}
+
+.log-in-button {
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.log-in-button:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: 20;
+    background: linear-gradient(90deg, rgb(21, 204, 237), rgb(212, 81, 112), rgb(21, 204, 237));
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5%;
+}
+
+.log-in-button:before {
+    filter: blur(20px);
+    animation: animate 8s linear infinite;
+}
+
+.log-in-button:hover:before {
+    opacity: 1;
+}
+
+/* COLOR PALETTE */
+/* Color palette 1:
+Valhalla (#241545): RGB(36, 21, 69)
+Cabaret (#D45170): RGB(212, 81, 112)
+Bright Turquoise (#15CCED): RGB(21, 204, 237)
+Denim (#1259B8): RGB(18, 89, 184)
+
+Color palette 2:
+Big Stone (#172540): RGB(23, 37, 64)
+Can Can (#D487A4): RGB(212, 135, 164)
+Picton Blue (#3AD7E8): RGB(58, 215, 232)
+Denim (#137AAC): RGB(19, 122, 172) */
