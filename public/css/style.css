@@ -11,7 +11,7 @@ body {
     /* font-family: "Potra", sans-serif; */
 }
 
-/* Breathing effect */
+/* Breathing effect for images */
 /* https://www.kirupa.com/html5/creating_colorful_smart_shadows.htm */
 .labyrinth-img {
     margin: 100px;
@@ -52,111 +52,36 @@ body {
 
 /* Glowing light effect between header and main */
 /* https://codepen.io/jouni/pen/rVYYQX */
-@keyframes progress1 {
-    0% {
-        transform: scaleX(0);
-        opacity: .5;
-    }
-
-    85% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-
-    92% {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scaleX(1);
-        opacity: 0;
-    }
+.line-between-header-main{
+    background: rgba(255,255,255,.1);
 }
 
-/* @keyframes progress2 {
-    0% {
-      transform: scale(.3,.8) translateZ(0);
-      opacity: 0;
-    }
-    90% {
-      transform: scale(1,1) translateX(300px) translateZ(0);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1,1) translateX(300px) translateZ(0);
-      opacity: 0;
-    }
-  } */
-
-@keyframes progress2 {
-    0% {
-        transform: scale(.3, .8) translateZ(0);
-        opacity: 0;
-    }
-
-    65% {
-        transform: scale(1, 1) translateX(100vw) translateZ(0);
-        opacity: 1;
-    }
-
-    70% {
-        transform: scale(1, 1) translateX(100vw) translateZ(0);
-        opacity: 1;
-    }
-
-    90% {
-        transform: scale(1, 1) translateX(100vw) translateZ(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1, 1) translateX(100vw) translateZ(0);
-        opacity: 0;
-    }
-}
-
-.line-between-header-main {
-    /* position: absolute;
-    top: 50%;
-    width: 300px;
-    left: 50%;
-    margin-left: -150px; */
-    height: 3px;
-    background: rgba(255, 255, 255, .1);
-}
-
-.line-between-header-main:before {
-    animation: progress1 4s infinite;
-    animation-delay: 1s;
-    transform-origin: 0 0;
-    content: "";
-    display: block;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 1));
-}
-
-.line-between-header-main:after {
-    content: "";
+.break-line-slider{
     position: absolute;
-    animation: progress2 4s infinite;
-    /* animation-timing-function: ease-out; */
-    animation-delay: 1s;
-    transform-origin: 90% 50%;
-    /* transform-origin: 0 0; */
-    margin-left: -30px;
-    top: 55px;
-    width: 30px;
-    height: 21px;
-    border-radius: 2px;
-    background: rgba(210, 189, 255, .55);
-    filter: blur(8px);
-    box-shadow: 0 0 10px 6px rgba(210, 189, 255, .4),
-        -20px 0 15px 4px rgba(210, 189, 255, .3),
-        -40px 0 15px 2px rgba(210, 189, 255, .2),
-        -60px 0 10px 1px rgba(210, 189, 255, .1),
-        -80px 0 10px 1px rgba(210, 189, 255, .05);
+    left: -80px;
+    background: linear-gradient(to right, rgba(255,255,255,0.4) 10%, rgba(255,255,255,1));
+    box-shadow: 
+    30px 0 15px 3px rgba(210,189,255,.7),
+    10px 0 15px 2px rgba(210,189,255,.4),
+    -20px 0 15px 2px rgba(210,189,255,.3),
+    -40px 0 15px 2px rgba(210,189,255,.2),
+    -60px 0 15px 2px rgba(210,189,255,.1),
+    -80px 0 10px 1px rgba(210,189,255,.2);
+    /* position: relative; */
+    animation: slider-slide 7s ease-in-out infinite;
+    animation-delay: 2s;
 }
+
+
+  
+  @keyframes slider-slide {
+    0% {
+      left: -80px;
+    }
+    100% {
+      left: calc(100% - 60px); /* Replace 100px with the width of your div */
+    }
+  }
 
 
 /* Log in button */

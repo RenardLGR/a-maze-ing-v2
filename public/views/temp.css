@@ -1,0 +1,190 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* ============================ */
+body{
+    background-color: rgb(23,37,64);
+  }
+  header{
+    color: white;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(36,21,69);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  /* Shooting star break line */
+  @keyframes progress1 {
+      0% {
+        transform: scaleX(0);
+        opacity: .5;
+      }
+      85% {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+      92% {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scaleX(1);
+        opacity: 0;
+      }
+    }
+  
+  
+    @keyframes progress2 {
+      0% {
+          transform: scale(.3,.8) translateZ(0);
+          opacity: 0;
+        }
+        65% {
+          transform: scale(1,1) translateX(100vw) translateZ(0);
+          opacity: 1;
+        }
+        70% {
+          transform: scale(1,1) translateX(100vw) translateZ(0);
+          opacity: 1;
+        }
+        90% {
+          transform: scale(1,1) translateX(100vw) translateZ(0);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1,1) translateX(100vw) translateZ(0);
+          opacity: 0;
+        }
+    }
+    
+    .line-between-header-mai {
+      height: 3px;
+      background: rgba(255,255,255,.1);
+    }
+    
+    .line-between-header-mai:before {
+      animation: progress1 4s infinite;
+      animation-delay: 1s;
+      transform-origin: 0 0;
+      content: "";
+      display: block;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255,255,255,0.1) 10%, rgba(255,255,255,0.4) 80%, rgba(255,255,255,1));
+    }
+    
+    .line-between-header-mai:after {
+      content: "";
+      position: absolute;
+      animation: progress2 4s infinite;
+      /* animation-timing-function: ease-out; */
+      animation-delay: 1s;
+      transform-origin: 90% 50%;
+      /* transform-origin: 0 0; */
+      margin-left: -30px;
+      top: 45px;
+      width: 30px;
+      height: 21px;
+      border-radius: 2px;
+      background: rgba(210,189,255,.55);
+      filter: blur(8px);
+      box-shadow: 0 0 10px 6px rgba(210,189,255,.4),
+                  -20px 0 15px 4px rgba(210,189,255,.3),
+                  -40px 0 15px 2px rgba(210,189,255,.2),
+                  -60px 0 10px 1px rgba(210,189,255,.1),
+                  -80px 0 10px 1px rgba(210,189,255,.05);
+    }
+
+
+.line-between-header-main{
+    height: 3px;
+    background: rgba(255,255,255,.1);
+}
+
+.moto{
+    position: absolute;
+    left: -80px;
+    width: 60px;
+    background: linear-gradient(to right, rgba(255,255,255,0.4) 10%, rgba(255,255,255,1));
+    height: 3px;
+    box-shadow: 
+    30px 0 15px 3px rgba(210,189,255,.7),
+    10px 0 15px 2px rgba(210,189,255,.4),
+    -20px 0 15px 2px rgba(210,189,255,.3),
+    -40px 0 15px 2px rgba(210,189,255,.2),
+    -60px 0 15px 2px rgba(210,189,255,.1),
+    -80px 0 10px 1px rgba(210,189,255,.2);
+    /* position: relative; */
+    animation: slide 7s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+
+  
+  @keyframes slide {
+    0% {
+      left: -80px;
+    }
+    100% {
+      left: calc(100% - 60px); /* Replace 100px with the width of your div */
+    }
+  }
+
+  
+@keyframes slidebof {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(calc(100% + 50px)); /* Move the element off the right side of the screen */
+    }
+  }

@@ -561,12 +561,24 @@ video {
   top: 0px;
 }
 
+.top-\[60px\] {
+  top: 60px;
+}
+
 .z-10 {
   z-index: 10;
 }
 
 .z-30 {
   z-index: 30;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .mx-auto {
@@ -606,6 +618,10 @@ video {
   height: 60px;
 }
 
+.h-\[3px\] {
+  height: 3px;
+}
+
 .w-\[100px\] {
   width: 100px;
 }
@@ -620,6 +636,14 @@ video {
 
 .w-\[46px\] {
   width: 46px;
+}
+
+.w-\[60px\] {
+  width: 60px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-row {
