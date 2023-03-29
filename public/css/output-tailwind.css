@@ -419,6 +419,12 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: "Potra";
+
+  src: url('./Potra.ttf') format("truetype");
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -569,16 +575,12 @@ video {
   z-index: 10;
 }
 
-.z-30 {
-  z-index: 30;
-}
-
-.z-40 {
-  z-index: 40;
-}
-
 .z-20 {
   z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .mx-auto {
@@ -590,12 +592,20 @@ video {
   margin-top: 5rem;
 }
 
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+
 .flex {
   display: flex;
 }
 
 .h-\[20px\] {
   height: 20px;
+}
+
+.h-\[3px\] {
+  height: 3px;
 }
 
 .h-\[40px\] {
@@ -614,12 +624,16 @@ video {
   height: 50px;
 }
 
-.h-\[60px\] {
-  height: 60px;
+.h-\[600px\] {
+  height: 600px;
 }
 
-.h-\[3px\] {
-  height: 3px;
+.h-\[605px\] {
+  height: 605px;
+}
+
+.h-\[60px\] {
+  height: 60px;
 }
 
 .w-\[100px\] {
@@ -638,6 +652,14 @@ video {
   width: 46px;
 }
 
+.w-\[600px\] {
+  width: 600px;
+}
+
+.w-\[605px\] {
+  width: 605px;
+}
+
 .w-\[60px\] {
   width: 60px;
 }
@@ -650,6 +672,10 @@ video {
   flex-direction: row;
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .items-center {
   align-items: center;
 }
@@ -660,6 +686,18 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .bg-blueDenim {
@@ -715,6 +753,10 @@ video {
   font-weight: 600;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -726,6 +768,8 @@ video {
 .text-fuschiaCabaret {
   color: RGB(212, 81, 112);
 }
+
+/* @import url('./Potra.ttf'); */
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;

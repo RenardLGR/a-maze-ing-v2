@@ -15,27 +15,57 @@
 
     <link rel="stylesheet" href="../css/output-tailwind.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/homepage-maze-board.css">
 </head>
 <body class="bg-darkBlueBigStone">
+    <!-- Header/Nav -->
     <header class="bg-darkPurpleValhalla h-[60px] sticky z-10 top-0 flex items-center">
         <nav class="container mx-auto flex items-center justify-between">
             <div class="bg-palePinkCancan w-[46px] h-[46px] flex items-center justify-center hover:cursor-pointer">
-                <a href="./other.html">
+                <a href="#">
                     <img src="../images/logo-512x512.png" alt="logo" class="w-[40px] h-[40px]">
                 </a>
             </div>
             <div class="log-in-button-container w-[110px] h-[50px] flex items-center justify-center">
-                <div class="hover:cursor-pointer text-darkPurpleValhalla font-Roboto text-xl flex items-center justify-center log-in-button w-[100px] h-[45px] text-center uppercase z-30">
-                    <a href="./other.html" class="z-30">Log in</a>
+                <div class="hover:cursor-pointer text-darkPurpleValhalla font-Roboto text-xl flex items-center justify-center log-in-button w-[100px] h-[45px] text-center uppercase font-medium z-30">
+                    <a href="#" class="z-30">Log in</a>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- Break line -->
     <div class="line-between-header-main sticky top-[60px] z-20 h-[3px] w-full">
-        <div class="break-line-slider z-20 w-[60px] h-[3px]"></div>
+        <div class="break-line-slider z-20 rounded-md w-[60px] h-[3px]"></div>
     </div>
-    <main>
-        
+    <!-- Main -->
+    <main class="mt-[100px]">
+        <!-- Create section -->
+        <section class="container mx-auto flex flex-row items-center justify-evenly">
+            <div>
+                <h2 class="font-Potra text-12xl font-semibold text-fuschiaCabaret">CREATE</h2>
+            </div>
+            <div class="outside-maze-board-wrapper flex items-center justify-center w-[605px] h-[605px] bg-fuschiaCabaret">
+                <div class="maze-board w-[600px] h-[600px]"></div>
+            </div>
+        </section>
+        <!-- Solve section -->
+        <section class="container mx-auto flex flex-row-reverse items-center justify-evenly">
+            <div>
+                <h2 class="font-Potra text-12xl font-semibold text-fuschiaCabaret">SOLVE</h2>
+            </div>
+            <div class="">
+                <div class="colorfulShadow labyrinth-solve-img"></div>
+            </div>
+        </section>
+        <!-- Share section -->
+        <section class="container mx-auto flex flex-row items-center justify-evenly">
+            <div>
+                <h2 class="font-Potra text-12xl font-semibold text-fuschiaCabaret">SHARE</h2>
+            </div>
+            <div class="">
+                <div class="colorfulShadow labyrinth-share-img"></div>
+            </div>
+        </section>
     </main>
     <section class="container flex flex-row mt-20">
         <div class="bg-darkPurpleValhalla h-[20px] w-[100px]"></div>
@@ -45,13 +75,7 @@
         <div class="bg-fuschiaCabaret h-[20px] w-[100px]"></div>
         <div class="bg-palePinkCancan h-[20px] w-[100px]"></div>
     </section>
-    <div>
-        <h2 class="font-Potra text-12xl font-semibold text-fuschiaCabaret">CREATE</h2>
-        <h2 class="font-Potra text-12xl font-semibold text-fuschiaCabaret">SOLVE</h2>
-        <h2 class="font-Potra text-12xl font-semibold text-fuschiaCabaret">SHARE</h2>
-    </div>
-    <div class="parent">
-        <div class="colorfulShadow labyrinth-img"></div>
-    </div>
+
+    <script src="../js/homepage.js"></script>
 </body>
 </html>

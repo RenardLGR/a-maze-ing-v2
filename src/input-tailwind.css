@@ -3,4 +3,11 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-@import url('./Potra.ttf');
+/* @import url('./Potra.ttf'); */
+
+@layer base {
+    @font-face {
+      font-family: "Potra";
+      src: url('./Potra.ttf') format("truetype");
+    }
+  }

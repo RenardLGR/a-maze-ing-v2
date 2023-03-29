@@ -1,23 +1,19 @@
-@font-face {
-    font-family: "Potra";
-    src: url("./Potra.ttf");
-}
-
-
-
-body {
-    /* background-color: rgb(20, 39, 63); */
-    /* color: black; */
-    /* font-family: "Potra", sans-serif; */
-}
-
 /* Breathing effect for images */
 /* https://www.kirupa.com/html5/creating_colorful_smart_shadows.htm */
-.labyrinth-img {
+.labyrinth-share-img {
     margin: 100px;
-    width: 1000px;
-    height: 1000px;
-    background-image: url("../images/labyrinth.png");
+    width: 600px;
+    height: 600px;
+    background-image: url("../images/labyrinth-share.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.labyrinth-solve-img {
+    margin: 100px;
+    width: 600px;
+    height: 600px;
+    background-image: url("../images/labyrinth-solve.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -37,7 +33,7 @@ body {
     z-index: -1;
 
     /* animation time! */
-    animation: image-breathing 2s cubic-bezier(.17, .67, .45, 1.32) infinite alternate;
+    animation: image-breathing 6s cubic-bezier(.17, .67, .45, 1.32) infinite alternate;
 }
 
 @keyframes image-breathing {
@@ -46,7 +42,7 @@ body {
     }
 
     to {
-        transform: scale(1.11, 1.11);
+        transform: scale(1.15, 1.15);
     }
 }
 
@@ -79,7 +75,7 @@ body {
       left: -80px;
     }
     100% {
-      left: calc(100% - 60px); /* Replace 100px with the width of your div */
+      left: calc(100% - 60px); /* Replace 60px with the width of your div */
     }
   }
 
