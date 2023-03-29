@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
+
+    <title>A-maze-ing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./public/css/output-tailwind.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/homepage-maze-board.css">
+</head>
+<body class="bg-darkBlueBigStone">
+    <!-- Header/Nav -->
+    <header class="bg-darkPurpleValhalla h-[60px] sticky z-10 top-0 flex items-center">
+        <nav class="container mx-auto flex items-center justify-between">
+            <div class="bg-palePinkCancan w-[46px] h-[46px] flex items-center justify-center hover:cursor-pointer">
+                <a href="#">
+                    <img src="./public/images/logo-512x512.png" alt="logo" class="w-[40px] h-[40px]">
+                </a>
+            </div>
+            <div class="log-in-button-container w-[110px] h-[50px] flex items-center justify-center">
+                <div class="hover:cursor-pointer text-darkPurpleValhalla font-Roboto text-xl flex items-center justify-center log-in-button w-[100px] h-[45px] text-center uppercase font-medium z-30">
+                    <a href="#" class="z-30">Log in</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Break line -->
+    <div class="line-between-header-main sticky top-[60px] z-20 h-[3px] w-full">
+        <div class="break-line-slider z-20 rounded-md w-[60px] h-[3px]"></div>
+    </div>
+    <!-- Main -->
+    <main class="mt-[100px]">
+        <!-- Create section -->
+        <section class="container mx-auto flex flex-row items-center justify-evenly">
+            <div>
+                <h2 class="font-Potra text-12xl font-semibold text-fuschiaCabaret">CREATE</h2>
+            </div>
+            <div class="outside-maze-board-wrapper flex items-center justify-center w-[605px] h-[605px] bg-fuschiaCabaret">
+                <div class="maze-board w-[600px] h-[600px]"></div>
+            </div>
+        </section>
+        <!-- Solve section -->
+        <section class="container mx-auto flex flex-row-reverse items-center justify-evenly">
+            <div>
+                <h2 class="font-Potra text-12xl font-semibold text-fuschiaCabaret">SOLVE</h2>
+            </div>
+            <div class="">
+                <div class="colorfulShadow labyrinth-solve-img"></div>
+            </div>
+        </section>
+        <!-- Share section -->
+        <section class="container mx-auto flex flex-row items-center justify-evenly">
+            <div>
+                <h2 class="font-Potra text-12xl font-semibold text-fuschiaCabaret">SHARE</h2>
+            </div>
+            <div class="">
+                <div class="colorfulShadow labyrinth-share-img"></div>
+            </div>
+        </section>
+    </main>
+    <section class="container flex flex-row mt-20">
+        <div class="bg-darkPurpleValhalla h-[20px] w-[100px]"></div>
+        <div class="bg-brightTurquoise h-[20px] w-[100px]"></div>
+        <div class="bg-cyanPictonBlue h-[20px] w-[100px]"></div>
+        <div class="bg-blueDenim h-[20px] w-[100px]"></div>
+        <div class="bg-fuschiaCabaret h-[20px] w-[100px]"></div>
+        <div class="bg-palePinkCancan h-[20px] w-[100px]"></div>
+    </section>
+
+    <script src="./public/js/homepage.js"></script>
+</body>
+</html>
