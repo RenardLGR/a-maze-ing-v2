@@ -676,6 +676,10 @@ video {
   flex-direction: row-reverse;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
@@ -690,10 +694,6 @@ video {
 
 .justify-evenly {
   justify-content: space-evenly;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .rounded-md {
@@ -744,17 +744,27 @@ video {
   font-size: 10rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-medium {
   font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -767,6 +777,11 @@ video {
 
 .text-fuschiaCabaret {
   color: RGB(212, 81, 112);
+}
+
+.text-yellow-500 {
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
 /* @import url('./Potra.ttf'); */
